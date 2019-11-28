@@ -1,0 +1,30 @@
+Ryan Rosiak
+COSC 220-001
+Lab-5 README File
+9/25/19
+
+Lab Description:
+This lab demonstrates the use of stacks backed by a linked list. Basic stack algorithms are 
+implemented such as push() and pop(). This lab also demonstrates the big three. These would be a 
+destructor, copy constructor, and overloaded assignment. If you need one then you need all of them. 
+This program demonstrates the use of all three. Overall, these functions as well as a size() 
+function will allow a basic implementation of a stack using dynamic memory.
+
+Files to pay attention to:
+
+main.o, payroll.o, PayRollStack.o - These are the three linker files that are needed for compilation
+
+main - Output file that is run when the program is executed by the user
+
+Makefile - File that allows the user to compile without haveing to input specific commands
+
+MakeFile Instructions:
+
+To compile the program:
+Type "make" without the quotes and the program will compile everything together for you
+Then proceed with using ./main in order to the run the program
+
+Instructions for Program:
+
+Follow the Makefile instruction above to run the program without any manual work. If not using 
+Makefile, then you much compile all three .cpp files together into .o files. Then you must link them and compile all while labeling the output file as main. **You must use -std=c++11 within your compilation steps. 

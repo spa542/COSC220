@@ -1,0 +1,34 @@
+Ryan Rosiak
+COSC 220-001
+Lab-9 README File
+11/5/19
+
+Lab Description:
+This lab demonstrates the use of templates. It follows the idea that we do not want to have
+to repeat code over and over to do similar functions. Therefore we create a template class
+along with template functions that allow the class and functions to take any data type.
+This is great because you only have to implement functionality once and this will allow any
+data type that you would like to work as you choose. This is extremely useful because 
+if you want lists of 2 or more data types, then you only have to type the functionality 
+once. Then every data type will work as you please.
+
+Files to pay attention to:
+
+main.o, payroll.o - These are the compilation linker files
+
+main - Output file that is run when the program is executed by the user
+
+Makefile - File that allows the user to compile without having to input specific commands
+
+Makefile Instructions:
+
+To compile the program:
+Type "make" without the quotes and the program will compile everything together for you. Then
+proceed with using ./main in order to run the program.
+
+Instructions for Program:
+
+Follow the Makefile instructions above to run the program without any manual work. If not
+using Makefile, then you must compile the .cpp files into .o files. (g++ -c main.cpp) Then
+you must link those with a final compilation all the while labeling the output file as main.
+**You must use -std=c++11 within your compilation steps 

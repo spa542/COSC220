@@ -1,0 +1,20 @@
+//Brock Forsythe COSC220 Project1
+
+/*This code holds student and class data, allows 
+ * the user to edit both, and remove data for
+ * the selected student, then print the data out
+ * at any time.
+ * 
+ * Example data:
+ * 	What would you like to do?
+ * 	1)Add a student
+ * 	2)Add a course
+ * 	3)Update a student
+ * 	4)Update a course
+ * 	5)Remove a student
+ * 	6)Remove a course
+ * 	7)Print Student list
+ * 	8)Print Course list
+ * 	9)End Program
+ * 
+ * 

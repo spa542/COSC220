@@ -1,0 +1,48 @@
+Ryan Rosiak
+COSC 220-001
+Project 2 REAME File
+10/23/19
+
+Project Description:
+
+This project is a game that represents a very old game that is played in Hanoi called the Towers of
+Hanoi. This program is built with a linked list stack. There are three instances of stacks within
+the main function and there are disk objects that are passed between them to represent someone
+picking up and placing the disks onto each stack. The program demonstrates the basic functions of a 
+stack such as pushing on to and popping off of the stack all the while abiding by the rules of the 
+game such as a bigger disk cannot be placed on top of a smaller one. There is a little bit of extra
+manipulation needed in order to implement the stack correctly with the game rules. This program also
+introduces a concept of taking more than one argument at runtime. The program requires that there 
+are only two arguments allowed to be passed, no more, no less. Not only this, but there is 
+validation on the number that is entered through the second argument to ensure that the program runs
+smoothly. Lastly, the game also has a win condition that is checked so that the game can feel like
+a real game as well as a recursive algorithm that can print out the optimal moves to win for the 
+user.
+
+Files to pay attention to:
+
+main.o, HanoiStack.o, Disk.o - These are the three linker files that are needed for compilation
+
+main - Output file that is run when the program is executed by the user
+
+Makefile - File that allows the user to compile without having to input specific commands
+
+Makefile Instructions:
+
+To compile the Program:
+Type "make" without the quotes and the program will compile everything together for you. Then 
+proceed with using ./main (numOfDisks) numOfDisks being the amount of disks that you would like
+to start with, to run the program. If any timestamp errors or weird compilation errors occur, then
+typ "make clean" to clea all of the .o files and then rerun the "make" command to compile the 
+program from scratch.
+
+Instructions for Program:
+
+Follow the Makefile instructions above to run the program without any manual work. If you are not
+using Makefile, then you must compile all 4 .cpp files together into .o files using the g++ -c 
+command. Then you must link them and compile all while labeling the output file as main. 
+**You must use -std=c++11 within your compilation steps
+**You must use no more or less than 2 arguments (ex. ./main 5)
+**Your second argument must be between 1 and 10 inclusive
+**Error messages are application specific
+**Compilation and running is for command line interfaces only

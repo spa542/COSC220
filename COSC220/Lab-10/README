@@ -1,0 +1,33 @@
+Ryan Rosiak
+COSC 220-001
+Lab-10 README File
+11/19/19
+
+Lab Description:
+This lab demonstrates the use of inheritance and polymorphism. It follows the idea that separate classes have a 
+"is a" relationship and Executives and Hourly Workers are Employees and that is how the inheritance works. The 
+child classes have access to the parent classes private members as well as adding their own specific members and
+functions themselves. The polymorphism aspect is shown by using virtual functions and overriding the parent 
+functions in the child class in order to create its own special function while following the same logic or goal
+as the original parent function.
+
+Files to pay attention to:
+
+main.o, Employee.o, Executive.o, Hourly.o - These are the compilation linker files
+
+main - Output file that is run when the program is executed by the user
+
+Makefile - File that allows the user to compile without having to input specific commands
+
+Makefile Instructions:
+
+To compile the program:
+Type "make" without the quotes and the program will compile everything together for you. Then proceed
+with using ./main in order to run the program.
+
+Instructions for Program:
+
+Follow the Makefile instructions above to run the program without any manual work. If not using Makfile, 
+then you must compile the .cpp files into .o files. (g++ -c main.cpp) Then you must link those with a final
+compilation all the while labeling the output file as main.
+**You must use -std=c++11 within your compilation steps

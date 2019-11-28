@@ -1,0 +1,42 @@
+Ryan Rosiak
+COSC 220-001
+Project 1 README File
+10/2/19
+
+Project Description:
+
+This project is student database that is backed using a linked list that has nodes that are singly
+linked like a normal linked list but with a twist. Each node also points to its own linked list
+of courses. This allows the user to add and remove courses as well as students to create a dynamic
+database. This project demonstrates greatly the use of memory management as there are a lot more 
+moving parts when allocating and deallocating memory. There are a lot more pointers to deal with
+as well as more nodes to manage as the database gets larger and larger. The basics of the project
+just allow CRUD operations when when it comes to students and course. But further implementation
+can be added in the future to create a more modernized database. This project does not save anything
+to a file so memory is not saved once the program is finished. But the operations and overall list
+implementation is there and fully functioning. Overall, this project served as a good example as to 
+how we use memory management and linked lists to create a more real life applicable program. 
+
+Files to pay attention to:
+
+main.o, course.o, student.o, StudentDB.o - These are the four linker files that are needed for 
+compilation
+
+main - Output file that is run when the program is executed by the user
+
+Makefile - File that allows the user to compile without having to input specific commands
+
+MakeFile Instructions:
+
+To compile the Program:
+Type "make" without the quotes and the program will compile everything together for you. Then 
+proceed with using ./main in order to run the program. If any timestamp errors or weird compilation
+errors occur, then type "make clean" to clear all of the .o files and then rerun the "make" command
+to compile the program from scratch. 
+
+Instructions for Program:
+
+Follow the Makefile instruction above to run the program without any manual work. If you are not
+using Makefile, then you must compile all 4 .cpp files together into .o files using the g++ -c 
+command. Then you must link them and compile all while labeling the output file as main. 
+**You must use -std=c++11 wihtin your compilation steps.
