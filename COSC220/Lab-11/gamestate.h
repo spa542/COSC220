@@ -3,6 +3,7 @@
 
 #include<map>
 #include <iostream>
+#include "player.h"
 
 class GameState {
   protected:
@@ -11,10 +12,6 @@ class GameState {
     std::map<int, std::string> choices;
 
   public:
-    // TODO: each state should have a chance of
-    // the user getting attacked
-    double combatProbability;
-
     // prints all options available to the user in this state
     virtual void printOptions() = 0;
 

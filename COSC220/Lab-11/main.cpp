@@ -29,9 +29,9 @@ int main(){
   // point to one of its subclasses
   GameState* currentState;
   GameState* oldState;
-
+  Player user;
   // Start the user off in a travel state, headed north
-  currentState = new TravelState("North");
+  currentState = new TravelState("North", user);
 
   while(true){
     // 1. Get options from the state
@@ -41,9 +41,10 @@ int main(){
     std::getline(std::cin, input);
 
 	oldState = currentState;
-    // 3. Pass input to the state, and get the new state
+    // 3. Pass input to the state as well as the user, and get the new state
     currentState = currentState->handleInput(input);
-	if (oldState != currentState) 
+    	if (oldState != currentState) 
 		delete oldState;
   }
+  return 0;
 }

@@ -5,10 +5,14 @@
 #include <stdlib.h>
 #include "gamestate.h"
 #include "travelstate.h"
+#include "player.h"
+#include "monster.h"
 
 class CombatState : public GameState {
 	private:
 		std::string currentDirection;
+		Monster m;
+		Player p;
 
 	enum Choices {
 		ATTACK_OPTION = 1,
@@ -16,8 +20,10 @@ class CombatState : public GameState {
 	};
 
 	public:
-		CombatState(std::string dir) {
+		CombatState(std::string dir, Monster mon, Player play) {
 			currentDirection = dir;
+			m = mon;
+			p = play;
 			choices[ATTACK_OPTION] = "Attack that mofo";
 			choices[FLEE_OPTION] = "Run away panzy";
 		};

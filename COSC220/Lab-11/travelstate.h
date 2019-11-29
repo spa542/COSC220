@@ -7,11 +7,16 @@
 #include <list>
 #include "idlestate.h"
 #include "combatstate.h"
+#include "player.h"
+#include "monster.h"
 
 class TravelState : public GameState {
   private:
     // Current direction of travel
     std::string direction;
+
+    // Current player object
+    Player p;
 
     // Denotes if there is a fork
     bool hasCrossroad;
@@ -27,7 +32,7 @@ class TravelState : public GameState {
     };
 
   public:
-    TravelState(std::string dir){
+    TravelState(std::string dir, Player play){
       direction = dir;
 
       // Randomly add a fork in the road
@@ -52,6 +57,7 @@ class TravelState : public GameState {
       // Set up the choice text for the user
       choices[CONTINUE_OPTION] = "Keep walking.";
       choices[SIT_OPTION] = "Sit and rest.";
+      p = play;
       if (hasCrossroad){
         choices[FORK_OPTION] = "Take the " + newDirection + " fork.";
       }

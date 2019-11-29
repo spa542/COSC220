@@ -2,6 +2,8 @@
 
 void TravelState::printOptions() {
   std::cout << "You are walking " << direction << std::endl;
+  std::cout << "Current loadout: " << std::endl;
+  p.printInfo();
   if (hasCrossroad){
     std::cout << "You see a fork in the road, headed " << newDirection << std::endl;
   }
@@ -28,26 +30,27 @@ GameState* TravelState::handleInput(std::string in) {
   int choice = std::stoi(in);
 
   // Temp variable to hold the new game state
-  GameState* rtn;
+  GameState* rtn = nullptr;
 
   switch (choice){
     case CONTINUE_OPTION:
       std::cout << "\nYou continue walking...\n";
 	if (rand()%10 + 1 > 6) { // 40% chance of an enemy appearing
-           rtn = new CombatState(direction); 
+	   Monster mon;
+           rtn = new CombatState(direction, mon, p); 
         } else {
-      	   rtn = new TravelState(direction);
+      	   rtn = new TravelState(direction, p);
 	}
       break;
     case SIT_OPTION:
       // construct and return a new idlestate
       // currently this will cause a segfault if the user
       // tries to sit down!
-      rtn = new IdleState(direction);
+      rtn = new IdleState(direction, p);
       break;
     case FORK_OPTION:
       std::cout << "\nYou take the fork...\n";
-      rtn = new TravelState(newDirection);
+      rtn = new TravelState(newDirection, p);
       break;
     default:
       std::cout << "Invalid option.\n";
