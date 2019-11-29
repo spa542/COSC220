@@ -1,0 +1,32 @@
+Ryan Rosiak
+COSC 220-001
+Lab-11 README File
+11/29/19
+
+Lab Description:
+This lab demonstrates extensive work on the concept of polymorphism. This lab is the basics of an old school
+rpg based game like oregon trail and that of the such. It is run using a game loop that has a pointer to a parent
+class and all of the "states" of the game are then inheriting that of the main gamestate. The pointer in the main
+function demonstrates polymorphism because it allows for the program gamestate pointer to access anything from any
+other class that inherits from gamestate. Therefore, showing how c++ polymorphism works in a nutshell.
+
+Files to pay attention to:
+
+main.o, monster.o, player.o, travelstate.o, combatstate.o, idlestate.o - These are the compilation linker files
+
+main - Output file that is run when the program is executed by the user
+
+Makefile - File that allows the user to compile without having to input specific commands
+
+Makefile Instructions:
+
+To compile the program:
+Type "make" without the quotes and the program will compile everything together for you. Then proceed with useing ./main
+in order to run the program.
+
+Instructions for Program:
+
+Follow the Makefile instructions above to run the program without any manual work. If not using Makefile, 
+then you must compile the .cpp files into .o files. (g++ -c mian.cpp) Then you must link those with a final
+compilation all the while labeling the output file as main.
+**You must use -std=c++11 within your compilation steps
