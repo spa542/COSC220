@@ -67,5 +67,8 @@ int main() {
         empArr[2]->print();
         std::cout << "The returned payrate from the pay() function is: " << empArr[2]->pay() << std::endl;
         std::cout << "===============================================\n" << std::endl;
+	delete empArr[0];
+	delete empArr[1];
+	delete empArr[2];
 	return 0;
 }
