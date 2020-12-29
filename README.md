@@ -2,7 +2,7 @@
 # Author: Ryan Rosiak
 # Teacher: Joseph Anderson
 <br /> <br />
-## Course Overview
+## Course Overview:
 A study of the design and implementation of abstract data types and algorithms
 using an object-oriented approach and standard class library. Attention will be paid to the
 introduction of data structures such as linked lists, vectors, stacks, queues, priority queues, lists,
