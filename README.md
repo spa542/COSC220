@@ -8,11 +8,14 @@ using an object-oriented approach and standard class library. Attention will be 
 introduction of data structures such as linked lists, vectors, stacks, queues, priority queues, lists,
 trees, etc.; searching and sorting algorithms and their runtime analysis. C++ is the teaching
 language.
+<br /> <br />
 ## Primary Language Used:
 * C++
+<br /> <br />
 ## Other Important Libraries/Applications Used:
 * Debian based linux environment
 * C++ standard library
+<br /> <br />
 ## Major Projects:
 ### Project 1 Student Database:
 #### Author: Ryan Rosiak
